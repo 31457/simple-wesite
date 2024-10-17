@@ -4,6 +4,9 @@
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Yogitha Yadla">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
@@ -11,6 +14,9 @@
 <style>
 .green{
 color:#006633;
+}
+h1{
+  color:#006633;
 }
 .boxing{
 border: 5px solid #006633;
@@ -21,23 +27,64 @@ border: 5px solid #006633;
 .grey{
 background-color:lightgray;
 }
+ nav{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+ }
 body {font-family: "Open Sans"}
 </style>
+<script>
+  
+        
+        function openHome() {
+            document.getElementById("homePage").style.display = "";
+            document.getElementById("educationPage").style.display = "none";
+            document.getElementById("workPage").style.display = "none";
+            
+        }
+       
+        function openEducation() {
+            document.getElementById("homePage").style.display = "none";
+            document.getElementById("educationPage").style.display = "";
+            document.getElementById("workPage").style.display = "none";
+
+            
+        }
+
+         function openWork() {
+           document.getElementById("homePage").style.display = "none";
+            document.getElementById("educationPage").style.display = "none";
+            document.getElementById("workPage").style.display = "";
+
+            
+        }
+
+
+    </script>
 </head>
 <body class=" grey">
-
+<!-- Author: Yogitha Yadla -->
 <!-- Navigation bar  -->
-<div class="w3-bar w3-black w3-hide-small">
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-instagram"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-snapchat"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="w3-bar-item w3-button"><i class="fa fa-linkedin"></i></a>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link " href="#" onclick="openHome()">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="openEducation()">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="openWork()">Work</a>
+      </li>
+      
+    </ul>
+  </div>
+</nav>
+ 
 
-</div>
-  
-<!-- w3-content defines a container for fixed size centered content, 
-and is wrapped around the whole page content, except for the footer in this example -->
-<div class="w3-content" style="max-width:1600px">
+<div id="homePage" class="w3-content" style="max-width:1600px">
 
  
  
@@ -81,13 +128,81 @@ and is wrapped around the whole page content, except for the footer in this exam
      <hr>    
 </div>
       <!-- Posts -->
+  </div>    
+  </div>
+
+<div id="educationPage" class="w3-content" style="max-width:1600px; padding: 10px; display:none;">
+<h1>EDUCATION</h1>
+<p><b>Master of Science</b>: Computer science at George Mason University</p>
+<p><b>Bachelor of Technology</b> : Computer science and engineering with specialisation in
+Artificial intelligence at K L University, India </p>
+<p><b>Schooling</b>: VPS Public school, India</p>
+<p></p>
+<p></p>
+<h1>PROJECTS & TECHNICAL PRESENTATIONS</h1>
+<p>1. Emotion recognition from speech utilizing Berlin DB and sparse coding
+  Term paper presentation</p>
+<p>2. Classifying IMBD movie reviews using sentiment analysis
+  Individual Project</p>
+<p>3. An attendance management system which takes attendance electronically and the records are stored using oracle
+  database. Html, CSS and JS are used for the front end and JSP as middleware.
+  </p>
+  <p></p>
+  <p></p>
+  <h1>VOLUNTEER EXPERIENCE</h1>
+  <p>1.Event Drafting Coordinator at TEDxKLU
+    </p>
+    <p>2. Food Stall owner at SAMYAK (National Level techno Managerial Fest</p>
+    <p>Event Coordinator at
+      INGNITE(Tech fest)</p>
+
+  </div>
+  <div id="workPage" class="w3-content" style="max-width:1600px; padding: 10px;display: none;">
+    <section>
+      <h1>PROFESSIONAL EXPERIENCE</h1>
       
+      <div>
+          <h3>Developer</h3>
+          <p><strong>Infosys Limited</strong></p>
+          <p>08/2021 – 07/2023</p>
+          <p>Hyderabad, India</p>
+          <ul>
+              <li>Interacted with clients to discuss new UI requirements and documented them.</li>
+              <li>Designed prototypes of various screens based on client requirements and made use of third-party components to maintain the consistency of the web application.</li>
+              <li>Developed responsive web pages using web markups like HTML, CSS, and Bootstrap.</li>
+              <li>Implemented user interface functionality using Angular.</li>
+              <li>Fixed bugs and supported the deployment of QA and UAT.</li>
+          </ul>
+      </div>
+  
+      <div>
+          <h3>System Engineer, Intern</h3>
+          <p><strong>Infosys Limited</strong></p>
+          <p>02/2021 – 05/2021</p>
+          <p>Mysore, India</p>
+          <ul>
+              <li>Got trained in UI MEAN Stack development.</li>
+              <li>Implemented a web application called 'Photography Blog' which allows users to sell and buy pictures online using MongoDB, Express JS, Angular, and NodeJS.</li>
+          </ul>
+      </div>
+  
+      <div>
+          <h3>Java Intern</h3>
+          <p><strong>Aspire Vision</strong></p>
+          <p>2018</p>
+          <p>Hyderabad, India</p>
+          <ul>
+              <li>Learnt the concepts of core and advanced Java and developed an Online Voting System, which eliminates all the paperwork and allows users to vote from any location in the world.</li>
+          </ul>
+      </div>
+  </section>
+  
+  </div>
 
 <!-- Footer -->
-<footer class="w3-container" style="padding:32px; background-color:lightgray ">
-  <a href="#" class="w3-button w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
- <a href="31457.github.io/csDep/csDepartment.html" class="w3-button w3-padding-large w3-margin-bottom">CD department information page</a>
- <a href="https://31457.github.io/survey/csSurvey.html" class="w3-button w3-padding-large w3-margin-bottom">CS Survey page</a>
+<footer class="w3-container " style="padding:10px; background-color:#006633 ">
+ <a href="https://31457.github.io/csDep/csDepartment.html" class="w3-button w3-padding-large w3-margin-bottom" style="background-color: #FFCC33; ">CD department information page</a>
+ <a href="https://31457.github.io/survey/csSurvey.html" class="w3-button w3-padding-large w3-margin-bottom " style="background-color: #FFCC33;">CS Survey page</a>
  
 </footer>
 
